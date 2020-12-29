@@ -1,0 +1,20 @@
+.navbar {
+    text-align: center;
+    background-color: #333;
+    color: white
+}
+#search-area {
+    text-align: left;
+    margin: 25px;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 500;
+    position: static;
+}
+#forecast {
+    text-align: left;
+    margin: 25px;
+    padding: 0px;
+    display: inline-block;
+
+}
