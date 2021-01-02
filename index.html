@@ -17,30 +17,42 @@
 
 <body>
   <!-- Navbar Title -->
-  <nav class="navbar"><span id="title">Weather Dashboard</span></nav>
+  <nav class="navbar"><span class="navbar-brand w-100 text-center" id="title">Weather Dashboard</span></nav>
 
   <div class="row">
-    <div class="column col-lg-3 col-md-3 col-sm-12">
+    <div class="column col-lg-3 col-md-4 col-sm-12">
       <form class="form-inline" id="search-area">
         Search for a City: <br />
-        <input class="form-control mr-sm-2" type="search" placeholder="City Name" aria-label="Search"id="city-name" />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-button"><i class="fas fa-search"></i></button>
+        <div class="input-group">
+          <input class="form-control" type="search" placeholder="City Name" aria-label="Search" id="city-name" />
+          <div class="input-group-append">
+            <button class="btn btn-outline-primary" type="submit" id="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <button class="btn btn-outline-danger" type="submit" id="clear-button">Clear Recent
+          <i class="fas fa-trash"></i>
+        </button>
       </form>
       <ul id="list" class="card list-group list-group-flush" style="width: 18rem">
-          <!-- <li class="list-group-item"></li> -->
+        <!-- <li class="list-group-item"></li> -->
       </ul>
     </div>
-    <div class="column col-lg-9 col-md-9 col-sm-12">
+    <div class="column col-lg-9 col-md-8 col-sm-12">
       <div class="row">
-        <div id="forecast"></div>
+
+        <div id="forecast" class="col-lg-12">
+
+        </div>
       </div>
       <div id="five-days" class="row">
-        <div class="col-lg-12">
-          <div id="day1" class="text-white col-lg-2"></div>
-          <div id="day2" class="text-white col-lg-2"></div>
-          <div id="day3" class="text-white col-lg-2"></div>
-          <div id="day4" class="text-white col-lg-2"></div>
-          <div id="day5" class="text-white col-lg-2"></div>
+        <div class="col-lg-10">
+          <div id="day1" class="text-white col-lg-2 col-md-4"></div>
+          <div id="day2" class="text-white col-lg-2 col-md-4"></div>
+          <div id="day3" class="text-white col-lg-2 col-md-4"></div>
+          <div id="day4" class="text-white col-lg-2 col-md-4"></div>
+          <div id="day5" class="text-white col-lg-2 col-md-4"></div>
         </div>
       </div>
     </div>

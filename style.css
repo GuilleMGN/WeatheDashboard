@@ -17,18 +17,25 @@ nav {
     font-size: 25px;
     font-weight: 500;
 }
+#search-button {
+    display: inline-block;
+}
 #forecast {
     margin-top: 50px;
     display: inline-block;
+    /* background-color: #dfdfdf; */
 }
 .col-lg-2 {
     display: inline-block;
-    margin-left: fit-content;
-    margin-right: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 li {
     cursor: pointer;
 }
-/* .days {
-
-} */
+.days {
+    margin-top: 10px;
+    border-top: 10px solid #007bff ;
+    border-radius: 10px;
+    min-width: 200px;
+}
