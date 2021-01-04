@@ -20,6 +20,11 @@ nav {
 #search-button {
     display: inline-block;
 }
+#feedback {
+    font-size: 14px;
+    color: red;
+
+}
 #forecast {
     margin-top: 50px;
     display: inline-block;

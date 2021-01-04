@@ -41,6 +41,7 @@ $(document).ready(function () {
         getUV(res.coord.lat, res.coord.lon);
         $("#forecast").text("");
         $("#city-name").val("");
+        $("#feedback").text("");
         if (history.indexOf(name) === -1) {
           history.push(name);
           window.localStorage.setItem("history", JSON.stringify(history));
@@ -67,9 +68,10 @@ $(document).ready(function () {
         $("#forecast").append(fiveDays);
 
       },
-      // error: function () {
-      //   $("forecast").text("Error! No cities found by that name. Try again. ");
-      // }
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log(textStatus, errorThrown);
+        $("#feedback").text("City not found. Try again. ");
+      }
     });
   }
 
