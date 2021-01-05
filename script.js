@@ -13,10 +13,8 @@ $(document).ready(function () {
     $("#list .list-group-item").remove();
     $("#city-name").val("");
   })
-
-
+// Function to make row in recent searches
   function makeRow(text) {
-
     var li = $("<li>").addClass("list-group-item").text(text).css('textTransform', 'capitalize');
     console.log(li);
     $("#list").prepend(li);
@@ -26,7 +24,7 @@ $(document).ready(function () {
       li.text(text).css('textTransform', 'capitalize');
     });
   }
-
+// Function that will use api for current weather
   function searchWeather(name) {
     console.log(name);
     var queryURL =
@@ -39,6 +37,7 @@ $(document).ready(function () {
         console.log(res);
         getForecast(res.coord.lat, res.coord.lon);
         getUV(res.coord.lat, res.coord.lon);
+        // Clears previous text
         $("#forecast").text("");
         $("#city-name").val("");
         $("#feedback").text("");
@@ -68,13 +67,14 @@ $(document).ready(function () {
         $("#forecast").append(fiveDays);
 
       },
+      // Feedback if user inputs invalid city name
       error: function (jqXHR, textStatus, errorThrown) {
         console.log(textStatus, errorThrown);
         $("#feedback").text("City not found. Try again. ");
       }
     });
   }
-
+// Function to get forecast for the next 5 days
   function getForecast(lat, lon) {
     var url2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly&units=metric&appid=ce20f5df05d025639d383fb109679b47`;
     $.ajax({
@@ -101,7 +101,7 @@ $(document).ready(function () {
       },
     });
   }
-
+// Function that will show if uv is favourable
   function getUV(lat, lon) {
     var url2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly&units=metric&appid=ce20f5df05d025639d383fb109679b47`;
     $.ajax({
@@ -124,6 +124,7 @@ $(document).ready(function () {
       }
     })
   }
+  // Saves search history to local storage
   var history = JSON.parse(localStorage.getItem("history")) || [];
   for (var i = 0; i < history.length; i++) {
     makeRow(history[i]);

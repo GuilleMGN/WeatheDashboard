@@ -18,9 +18,9 @@
 <body>
   <!-- Navbar Title -->
   <nav class="navbar"><span class="navbar-brand w-100 text-center" id="title">Weather Dashboard</span></nav>
-
   <div class="row">
     <div class="column col-lg-3 col-md-4 col-sm-12">
+      <!-- Search Area -->
       <form class="form-inline" id="search-area">
         Search for a City: <br />
         <div class="input-group">
@@ -36,17 +36,15 @@
         </button>
         <p id="feedback"></p>
       </form>
-      <ul id="list" class="card list-group list-group-flush" style="width: 18rem">
-        <!-- <li class="list-group-item"></li> -->
-      </ul>
+      <!-- List of recent searches -->
+      <ul id="list" class="card list-group list-group-flush" style="width: 18rem"></ul>
     </div>
     <div class="column col-lg-9 col-md-8 col-sm-12">
+      <!-- Outputs current forecast -->
       <div class="row">
-
-        <div id="forecast" class="col-lg-12">
-
-        </div>
+        <div id="forecast" class="col-lg-12"></div>
       </div>
+      <!-- Outputs 5 day forecast -->
       <div id="five-days" class="row">
         <div class="col-lg-10">
           <div id="day1" class="text-white col-lg-2 col-md-4"></div>
@@ -58,7 +56,7 @@
       </div>
     </div>
   </div>
-
+  <!-- Link to javascript, jquery, and moment -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="script.js"></script>
