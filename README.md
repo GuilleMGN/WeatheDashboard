@@ -7,6 +7,6 @@ temperature, date, and humidity. Whenever the user searches a city, it will save
 user selects the city, it will reopen the forecast for that city. There is also a clear button to remove all cities on that list and clear local storage. I then used bootstrap for page styling, ui improvements, and page responsiveness. 
 
 GitHub Repository of application: https://github.com/GuilleMGN/WeatherDashboard
-Link of live application: https://guillemgn.github.io/WeatherDashboard/
+Live link to deployed application: https://guillemgn.github.io/WeatherDashboard/
 
 Screenshot of application: ![Screenshot](https://user-images.githubusercontent.com/73862470/103605453-ea460e80-4ee1-11eb-8f09-747e6a66cbdb.PNG)
